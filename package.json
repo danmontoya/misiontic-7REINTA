@@ -1,0 +1,40 @@
+{
+  "name": "misiontic-7reinta",
+  "version": "1.0.0",
+  "description": "Repositorio del grupo 7TREINTA (SIETE TREINTA) para el ciclo 4 misionTic 2022",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js --exec babel-node",
+    "build": "babel src --out-dir build",
+    "start": "node build/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danmontoya/misiontic-7REINTA.git"
+  },
+  "keywords": [],
+  "author": "JoseDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danmontoya/misiontic-7REINTA/issues"
+  },
+  "homepage": "https://github.com/danmontoya/misiontic-7REINTA#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.12",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/node": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "nodemon": "^2.0.14"
+  }
+}

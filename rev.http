@@ -1,0 +1,50 @@
+@url = http://localhost:4000
+
+POST {{url}}/products
+Content-Type: application/json
+
+{
+    "nombre": "prueba3",
+    "category": "test",
+    "price": 421,
+    "imgUrl": "https://blogthinkbig.com/wp-content/uploads/sites/4/2019/03/Python-Example-Logo-e1555498232969.jpg?fit=1500%2C663"
+}
+###
+GET {{url}}/products
+###
+GET {{url}}/products/618626e1124de3dedb07d273
+
+###
+PUT {{url}}/products/618626e1124de3dedb07d273
+Content-Type: application/json
+
+{
+    "nombre": "prueba2.1",
+    "category": "test",
+    "price": 420,
+    "imgUrl": "https://blogthinkbig.com/wp-content/uploads/sites/4/2019/03/Python-Example-Logo-e1555498232969.jpg?fit=1500%2C663"
+
+}
+
+###
+DELETE {{url}}/products/618627a9a0de5ef6cfa82039
+
+### Auth
+POST {{url}}/auth/signup
+Content-Type: application/json
+
+{
+    "username": "dios",
+    "email":"dios@mail.com",
+    "password": "123456",
+    "roles": ["moderator"]
+}
+
+### 
+POST {{url}}/auth/login
+Content-Type: application/json
+
+{
+    "email": "mod@mail.com",
+    "password": "123456"
+}
