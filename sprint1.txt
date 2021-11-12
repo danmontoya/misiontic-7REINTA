@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 nombre: jhoan sebastian sierra v
 Soy matematico tengo 24 años y estoy cursando mi maestria, me interesa aprender programación porque se me hace fundamental en el desarrollo de cualquier profeción
 
@@ -14,3 +15,8 @@ desde mi rama daniel-dev
 Genesis Paola Sierra Vargas
 Administradora de Empresas, 28 años, tengo una distribuidora de articulos de ferreteria
 vivo en la ciudad de Bogotá.
+=======
+Alvaro Cobo Jacome
+Ing. Sistemas
+desde mi rama Alvaro-dev
+>>>>>>> alvaro-dev
