@@ -1,7 +1,11 @@
 import mongoose from 'mongoose'
+import config from './config'
 
 //Aca establecemos el como  y a que DB se conecte
-mongoose.connect("mongodb://localhost/api-mongoAuth",{
+//normal
+//"mongodb://localhost/api-mongoAuth"
+const mongoAtlas = `mongodb+srv://${config.USERADMI}:${config.PASSWORD}@josedb.o8ohx.mongodb.net/api`
+mongoose.connect(mongoAtlas,{
     useNewUrlParser: true,
     useUnifiedTopology: true,
     

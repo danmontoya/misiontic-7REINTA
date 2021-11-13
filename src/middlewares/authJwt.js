@@ -33,12 +33,12 @@ export const isModerator = async (req, res, next) => {
     console.log(roles);
 
     for(let i = 0; i<roles.length; i++) {
-        if(roles[i].nombre === "moderator"){
+        if(roles[i].nombre === "Lider"){
             next()
             return;
         }
     }
-    return res.status(403).json({message: "Require Moderator Role"})
+    return res.status(403).json({message: "Require Lider Role"})
     
 }
 
@@ -48,10 +48,10 @@ export const isAdmin = async (req, res, next) => {
     console.log(roles);
 
     for(let i = 0; i<roles.length; i++) {
-        if(roles[i].nombre === "admin"){
+        if(roles[i].nombre === "Administrador"){
             next()
             return;
         }
     }
-    return res.status(403).json({message: "Require Admin Role"})
+    return res.status(403).json({message: "Require Administrador Role"})
 }

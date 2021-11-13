@@ -1,10 +1,11 @@
 import {Schema, model} from 'mongoose'
 
-export const ROLES = ["user", "admin", "moderator"]
+export const ROLES = ["Estudiante", "Administrador", "Lider", "Pendiente"]
 const roles = new Schema({
     nombre: String
 }, {
-    versionKey: false
+    versionKey: false,
+    
 })
 
 export default model('Role', roles);

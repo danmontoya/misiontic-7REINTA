@@ -1,3 +1,5 @@
 export default {
-    SECRET: 'product-api'
+    SECRET: 'product-api',
+    USERADMI: 'admi',
+    PASSWORD: 'passwordJose' 
 }

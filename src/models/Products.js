@@ -1,13 +1,25 @@
 import {Schema, model} from 'mongoose'
 
-const productSchema = new Schema({
+const projectSchema = new Schema({
     nombre: String,
-    category: String,
-    price: Number,
-    imgUrl: String
+    ObjGenerales: String,
+    ObjEspecificos: String,
+    presupuesto: Number,
+    fechaInicio: Date,
+    fechaTerminacion: Date,
+    crea: {
+        ref:"User",
+        type: Schema.Types.ObjectId
+    },
+    estado: Boolean,
+    fase:{
+        ref:"Fases",
+        type: Schema.Types.ObjectId
+    }
 }, {
     timestamps: true,
-    versionKey: false
+    versionKey: false,
+
 })
 
-export default model('Product', productSchema);
+export default model('Product', projectSchema);

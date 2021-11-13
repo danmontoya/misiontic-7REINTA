@@ -37,7 +37,7 @@ Content-Type: application/json
     "username": "dios",
     "email":"dios@mail.com",
     "password": "123456",
-    "roles": ["moderator"]
+    "roles": ["Administrador"]
 }
 
 ### 
