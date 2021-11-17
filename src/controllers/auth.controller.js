@@ -34,7 +34,7 @@ export const login = async (req, res) => {
         if (!userFound) {
             res.status(400).json({ message: "User not found" })
         }
-
+        //console.log(userFound.roles);
         const matchPsswrd = await User.comparePassword(
             req.body.password,
             userFound.password

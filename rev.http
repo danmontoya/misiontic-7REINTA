@@ -45,6 +45,6 @@ POST {{url}}/auth/login
 Content-Type: application/json
 
 {
-    "email": "mod@mail.com",
+    "email": "dios@mail.com",
     "password": "123456"
 }
