@@ -5,10 +5,11 @@ import Role from '../models/Rol'
 
 
 export const signUp = async (req, res) => {
-    const { username, email, password, roles } = req.body;
+    const { username, identificacion, email, password, roles } = req.body;
     const newUser = new User({
         username,
         email,
+        identificacion,
         password: await User.encryptPassword(password),
         roles
     })

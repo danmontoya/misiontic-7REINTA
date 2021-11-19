@@ -4,7 +4,7 @@ import Role from '../models/Rol'
 
 export const createUser = async(req, res) => {
     try {
-        const {username, email, password, roles} = req.body;
+        const {username, email, identificacion, password, roles} = req.body;
         const rolesFound = await Role.find({nombre: {$in: roles}});
         console.log(rolesFound);
         console.log('++++');
@@ -12,6 +12,7 @@ export const createUser = async(req, res) => {
         //creating user 
         const user = new User({
             username,
+            identificacion,
             email,
             password,
             roles: rolesFound.map((role) => role._id)
@@ -26,6 +27,7 @@ export const createUser = async(req, res) => {
         return res.status(200).json({
             _id: savedUser._id,
             username: savedUser.username,
+            identificacion: savedUser.identificacion,
             email: savedUser.email,
             roles: savedUser.roles,
         });

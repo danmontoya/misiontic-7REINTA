@@ -7,6 +7,10 @@ const userSchema= new Schema({
         unique: true,
 
     },
+    identificacion:{
+        type: 'number',
+        unique: true
+    },
     email: {
         type: 'string',
         unique: true,

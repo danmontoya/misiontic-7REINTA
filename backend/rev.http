@@ -35,6 +35,7 @@ Content-Type: application/json
 
 {
     "username": "dios",
+    "identificacion": "1015464260",
     "email":"dios@mail.com",
     "password": "123456",
     "roles": ["Administrador"]
