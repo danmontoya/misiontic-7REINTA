@@ -34,11 +34,11 @@ POST {{url}}/auth/signup
 Content-Type: application/json
 
 {
-    "username": "dios",
+    "username": "lider",
     "identificacion": "1015464260",
-    "email":"dios@mail.com",
+    "email":"lider@mail.com",
     "password": "123456",
-    "roles": ["Administrador"]
+    "roles": ["Lider"]
 }
 
 ### 

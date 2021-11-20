@@ -5,7 +5,7 @@ import config from './config'
 //normal
 const local = "mongodb://localhost/api-mongoAuth"
 const mongoAtlas = `mongodb+srv://${config.USERADMI}:${config.PASSWORD}@josedb.o8ohx.mongodb.net/api`
-mongoose.connect(local,{
+mongoose.connect(mongoAtlas,{
     useNewUrlParser: true,
     useUnifiedTopology: true,
     
