@@ -1,25 +1,35 @@
 import {Schema, model} from 'mongoose'
 
+const user = new Schema({
+    usuario: String,
+    email: String,
+    roles: [{
+        ref:"Role",
+        type: Schema.Types.ObjectId
+    }]
+})
+
 const projectSchema = new Schema({
     nombre: String,
     ObjGenerales: String,
     ObjEspecificos: String,
     presupuesto: Number,
-    fechaInicio: Date,
-    fechaTerminacion: Date,
+    fechaInicio: String,
+    fechaTerminacion: String,
     crea: {
-        ref:"User",
-        type: Schema.Types.ObjectId
+        type: user
     },
     estado: Boolean,
     fase:{
-        ref:"Fases",
-        type: Schema.Types.ObjectId
+        nombre: String,
+        contraseña: String
     }
 }, {
     timestamps: true,
     versionKey: false,
 
 })
+
+
 
 export default model('Product', projectSchema);

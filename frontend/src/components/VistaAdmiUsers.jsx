@@ -1,30 +1,36 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios';
 
 export const VistaAdmiUsers = () => {
+    const url = 'http://localhost:4000'
     const [select, setSelect] = useState()
-    const [back, setback] = useState()
+    
 
     const  handleChange = (e) =>{
         setSelect(e.target.value)
         console.log(select);
     }
 
-    const getFromBack = async () => {
-        try {
-            const response = await axios({
-                url: 'http://localhost:4000/products',
-                method: 'GET'
+    const handleGet = () => {
+        axios.get(`${url}/users/getUsers`)
+            .then(function (response) {
+                // handle success
+                console.log(response.data);
+                console.log(response.config);
             })
-            setback(response)
-            console.log(back);
-            return response
-            
-        } catch (error) {
-            console.log(error);
-        }
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+            .then(function () {
+                // always executed
+            });
     }
+
+    useEffect(() => {
+        handleGet()
+    }, [])
     return (
         <div>
             <div className="container">
@@ -56,7 +62,7 @@ export const VistaAdmiUsers = () => {
                             </td>
                             <td>Proyectos</td>
                             <td>
-                                <Link className="btn btn-outline-warning" to='/usersList' onClick={getFromBack}>Actualizar</Link>
+                                <Link className="btn btn-outline-warning" to='/usersList' onClick={handleChange}>Actualizar</Link>
                             </td>
                             
                         </tr>

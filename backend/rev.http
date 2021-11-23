@@ -12,6 +12,8 @@ Content-Type: application/json
 ###
 GET {{url}}/products
 ###
+GET {{url}}/users/getUsers
+###
 GET {{url}}/products/618626e1124de3dedb07d273
 
 ###
@@ -34,11 +36,11 @@ POST {{url}}/auth/signup
 Content-Type: application/json
 
 {
-    "username": "lider",
-    "identificacion": "1015464260",
-    "email":"lider@mail.com",
+    "username": "pruebaMan",
+    "identificacion": "003",
+    "email":"man@mail.com",
     "password": "123456",
-    "roles": ["Lider"]
+    "roles": ["Estudiante"]
 }
 
 ### 

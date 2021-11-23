@@ -3,9 +3,9 @@ import {createProduct, getProducts, getProductById, updateProductById, deletePro
 import {authJwt} from '../middlewares/index'
 
 const router = Router()
-
+//[authJwt.verifyToken, authJwt.isAdmin],
 router.get('/', getProducts)
-router.post('/', [authJwt.verifyToken, authJwt.isAdmin], createProduct)
+router.post('/',[authJwt.verifyToken, authJwt.isAdmin],  createProduct)
 router.get('/:productId', getProductById)
 router.put('/:productId', authJwt.verifyToken, updateProductById)
 router.delete('/:productId', [authJwt.verifyToken, authJwt.isAdmin], deleteProductById)

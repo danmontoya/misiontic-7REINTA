@@ -1,10 +1,30 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 export const LoginUsers = () => {
+    const url = 'http://localhost:4000'
 
     const [email, setEmail] = useState();
     const [psswd, setPsswd] = useState();
+    axios.defaults.headers.post['Content-Type'] = 'application/json';
+
+
+    const handleLogin = () => {
+        const objeto = {
+            email,
+            password: psswd
+        }
+
+        axios.post(`${url}/auth/login`, objeto)
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+    }
 
     return (
         <div>
@@ -28,7 +48,7 @@ export const LoginUsers = () => {
                                         ></input>
                                         <label htmlFor="nuevoSercicio" className="form-label">Contraseña</label>
                                         <input
-                                            type="password"
+                                            type="text"
                                             placeholder="Tu contraseña"
                                             className="form-control"
                                             value={psswd}
@@ -36,7 +56,7 @@ export const LoginUsers = () => {
                                         ></input>
                                         <hr></hr>
                                         <div className="container d-flex justify-content-between">
-                                            <Link className="btn btn-outline-success d-flex justify-content-start" to='/' >Ingresar</Link>
+                                            <Link className="btn btn-outline-success d-flex justify-content-start" to='/' onClick={handleLogin}>Ingresar</Link>
 
                                             <Link to='/registrar' className="d-flex justify-content-end">No tienes cuenta? registrate!</Link>
 

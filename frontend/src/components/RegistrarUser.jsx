@@ -7,7 +7,9 @@ export const RegistrarUser = () => {
     const [email, setEmail] = useState();
     const [psswd, setPsswd] = useState();
     const [identificacion, setIdentificacion] = useState();
-    const [select, setSelect] = useState()
+    const [username, setUsername] = useState();
+    const [select, setSelect] = useState();
+    axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 
     const handleChange = (e) => {
@@ -25,8 +27,15 @@ export const RegistrarUser = () => {
         }
         console.log(objeto);
         axios.post('http://localhost:4000/auth/signup', objeto)
-        .then(response => {console.log(response);})
-        .catch(err => {console.log(err);})
+        .then(response => {
+            console.log(response)
+        })
+        .catch(err => {
+            console.log(err);
+        })
+        .then(function () {
+            // always executed
+        });
     }
 
     
@@ -43,6 +52,14 @@ export const RegistrarUser = () => {
                                 </div>
                                 <div className="card-body">
                                     <form>
+                                    <label htmlFor="nuevoSercicio" className="form-label">Nombre</label>
+                                        <input
+                                            type="text"
+                                            placeholder="Ingresa tu nombre"
+                                            className="form-control"
+                                            value={username}
+                                            onChange={(event) => setUsername(event.target.value)}
+                                        ></input>
                                         <label htmlFor="nuevoSercicio" className="form-label">Correo electronico</label>
                                         <input
                                             type="email"
