@@ -36,9 +36,9 @@ POST {{url}}/auth/signup
 Content-Type: application/json
 
 {
-    "username": "pruebaMan",
-    "identificacion": "003",
-    "email":"man@mail.com",
+    "username": "pruebaManmen",
+    "identificacion": "0038",
+    "email":"mano@mail.com",
     "password": "123456",
     "roles": ["Estudiante"]
 }

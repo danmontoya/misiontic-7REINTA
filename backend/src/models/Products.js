@@ -21,8 +21,8 @@ const projectSchema = new Schema({
     },
     estado: Boolean,
     fase:{
-        nombre: String,
-        contraseña: String
+        nombre: String
+        
     }
 }, {
     timestamps: true,

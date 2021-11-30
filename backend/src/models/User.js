@@ -8,7 +8,7 @@ const userSchema= new Schema({
 
     },
     identificacion:{
-        type: 'number',
+        type: 'string',
         unique: true
     },
     email: {
