@@ -1,7 +1,7 @@
 import jwk from 'jsonwebtoken'
 import config from '../config'
 import Role from '../models/Rol'
-import User from '../models/User'
+import User from '../models/Users/User'
 
 export const verifyToken = async (req, res, next) => {
     const token = req.headers["x-access-token"]

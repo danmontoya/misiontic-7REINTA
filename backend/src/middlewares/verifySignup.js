@@ -1,5 +1,5 @@
 import {ROLES} from '../models/Rol'
-import User from '../models/User'
+import User from '../models/Users/User'
 
 
 export const checkRolesExisted = (req, res, next) => {
