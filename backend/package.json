@@ -1,43 +1,26 @@
 {
-  "name": "misiontic-7reinta",
+  "name": "gestion-proyectos-mintic-back",
   "version": "1.0.0",
-  "description": "Repositorio del grupo 7TREINTA (SIETE TREINTA) para el ciclo 4 misionTic 2022",
   "main": "index.js",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index.js --exec babel-node",
-    "build": "babel src --out-dir build",
-    "start": "node build/index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/danmontoya/misiontic-7REINTA.git"
-  },
-  "keywords": [],
-  "author": "JoseDev",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/danmontoya/misiontic-7REINTA/issues"
-  },
-  "homepage": "https://github.com/danmontoya/misiontic-7REINTA#readme",
+  "type": "module",
   "dependencies": {
     "apollo-server-express": "^3.5.0",
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
+    "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "graphql": "^15.7.2",
-    "helmet": "^4.6.0",
+    "graphql": "^16.0.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.12",
-    "morgan": "^1.10.0"
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
   },
   "devDependencies": {
-    "@babel/cli": "^7.16.0",
-    "@babel/core": "^7.16.0",
-    "@babel/node": "^7.16.0",
-    "@babel/preset-env": "^7.16.0",
-    "nodemon": "^2.0.14"
+    "nodemon": "^2.0.15"
   }
 }
