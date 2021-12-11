@@ -11,6 +11,7 @@ import ban from './imgs/banner.jpeg';
 import { ListaProyectos } from './components/ListaProyectos';
 import { VistaAdmiUsers } from './components/VistaAdmiUsers';
 import { Perfil } from './components/Perfil';
+import { insproyecto} from './components/insproyecto';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/listaProyectos" component={ListaProyectos}/>
           <Route path="/usersList" component={VistaAdmiUsers}/>
           <Route path="/perfil" component={Perfil}/>
+          <Route path="/insproyecto" component={insproyecto}/>
 
         </Switch>
       </Router>
