@@ -60,7 +60,16 @@ export const VistaAdmiUsers = () => {
 
                                         </select>
                             </td>
-                            <td>Proyectos</td>
+                            <td>
+                            <select className="form-select"
+                            value={select}
+                            onChange={handleChange}>
+                                            <option defaultValue>Pendiente</option>
+                                            <option value="Autorizado">Autorizado</option>
+                                            <option value="No Autorizado">No Autorizado</option>
+                                        </select>
+
+                            </td>
                             <td>
                                 <Link className="btn btn-outline-warning" to='/usersList' onClick={handleChange}>Actualizar</Link>
                             </td>
